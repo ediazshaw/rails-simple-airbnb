@@ -1,0 +1,16 @@
+<h3>Simple Airbnb</h3>
+<h1>All Flats</h1>
+<div class="my-cards d-flex">
+ <% @flats.each do |flat| %>
+  <div class="my-card">
+  <h2><%=flat.name%></h2>
+  <%=flat.address%>
+  <br>
+  <%=flat.price_per_night%> <%=flat.number_of_guests%>
+  <br>
+  <div class="info">
+  <%= link_to "More info", flat_path(flat) %>
+  </div>
+  </div>
+ <% end %>
+</div>
